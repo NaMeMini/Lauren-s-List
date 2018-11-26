@@ -2,8 +2,8 @@ import random
 import pickle
 
 optiona = "\nAdd to the list"
-optionb = "\nNoiceeee. Here's the list, what did you end up doing?\n"
-optionc = "\nWay to not have a sweet idea nerd. I'll get you one.\n\n"
+optionb = "\nHere's the list, what did you end up doing?\n"
+optionc = "\nLet's get you a date.\n\n"
 option0 = "EXIT"
 fileObject = open('Date List', 'rb')
 natelaurenlist = pickle.load(fileObject)
@@ -28,21 +28,16 @@ def mainmenu():
 #when user selects B, they should be able to pop any item off the list into the completed section and then add any details they would like
 		elif initialprompt == "B" or initialprompt == "b" or initialprompt == " B" or initialprompt == " b":
 			input((optionb) + ("\n".join(natelaurenlist)))
-	#"""print("\n".join(natelaurenlist))
-	#input("
-	#File_Name2 = "Completed List"
-	#ileObject = open(File_Name2, 'wb')
-	#pickle.dump(natelaurenlist, fileObject)
-	#fileObject.close()
-	#fileObject = open(File_Name2, 'rb')"""
 	
+	#Need to figure this part out, potentially would want to pop the item off the date list into a completed list for reference
+		
 	
 #When user selects C, they get a random date activity from the list. 	
 		elif initialprompt == "C" or initialprompt == "c" or initialprompt == " C" or initialprompt == " c":
 			print(optionc + random.choice(natelaurenlist))
 			
 		elif initialprompt == "0" or initialprompt == " 0":
-			print("See Ya SUCKA")
+			print("Have a nice day!")
 			quit()
 	
 	
